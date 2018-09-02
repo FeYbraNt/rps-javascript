@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock Paper Scissors</title>
+
+    <!-- Libraries for styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div>
+        
+        <!-- INIT -->
+        <div class="container">
+            <div class="jumbotron">
+                <div class="text-center">
+                    <h1>Rock, Paper & Scissors</h1>
+                    <h3><i>Click to start a game</i></h3>
+                    <button class="btn btn-primary" id="start-player-computer">Player vs CPU</button>
+                    <button class="btn btn-danger" id="start-computer-computer">CPU vs CPU</button>    
+                </div>
+            </div>
+        </div>
+
+        <!-- THE GAME -->
+        <div class="container text-center" id="game" style="visibility: hidden;">
+            <div class="col-md-5">
+                <h3> Player 1: </h3>
+                    <div class="btn-group btn-group-toggle" id="game-player1">
+                        <button class="btn btn-lg rock"><i class="fa fa-diamond" aria-hidden="true"></i></button>
+                        <button class="btn btn-lg paper"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                        <button class="btn btn-lg scissors"><i class="fa fa-scissors" aria-hidden="true"></i></button>
+                    </div>
+            </div>
+
+            <div class="col-md-2">
+                <h1> <i> VS </i></h1>
+            </div>
+
+            <div class="col-md-5">
+                <h3>Player 2: </h3>
+                <div class="btn-group btn-group-toggle" id="game-player2">
+                    <button class="btn btn-lg rock"><i class="fa fa-diamond" aria-hidden="true"></i></button>
+                    <button class="btn btn-lg paper"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                    <button class="btn btn-lg scissors"><i class="fa fa-scissors" aria-hidden="true"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RESULTS & PLAY AGAIN -->
+        <div class="container text-center" id="results" style="visibility: hidden;">
+            <h2></h2>
+            <button class="btn btn-info" id="new-game">Play Again?</button>
+        </div>
+
+    </div>
+
+    <!-- Library for font-awesome icons -->
+    <script src="https://use.fontawesome.com/eec808ca0a.js"></script>
+
+    <script type="text/javascript" src="src/main.js"></script>
+    <script type="text/javascript" src="src/Game.js"></script>
+    <script type="text/javascript" src="src/HumanPlayer.js"></script>
+    <script type="text/javascript" src="src/CPUPlayer.js"></script>
+
+
+</body>
+
+</html>
