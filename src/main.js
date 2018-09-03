@@ -24,27 +24,15 @@ HUMAN_VS_CPU_BUTTON.addEventListener('click', function() {
 });
 
 HUMAN_PLAYS_ROCK.addEventListener('click', function() {
-    if ((game_mode === 'human_vs_cpu') && (player1.hand === null)) {
-        player1.takeHand("rock"); hightlightHand_UI(player1, 1);
-        player2.takeHand(); hightlightHand_UI(player2, 2);
-        resolveGame(game);
-    }
+    humanPlaysHand("rock");
 });
 
 HUMAN_PLAYS_SCISSORS.addEventListener('click', function() {
-    if ((game_mode === 'human_vs_cpu') && (player1.hand === null)) {
-        player1.takeHand("scissors"); hightlightHand_UI(player1, 1);
-        player2.takeHand(); hightlightHand_UI(player2, 2);
-        resolveGame(game);
-    }
+    humanPlaysHand("scissors");
 });
 
 HUMAN_PLAYS_PAPER.addEventListener('click', function() {
-    if ((game_mode === 'human_vs_cpu') && (player1.hand === null)) {
-        player1.takeHand("paper"); hightlightHand_UI(player1, 1);
-        player2.takeHand(); hightlightHand_UI(player2, 2);
-        resolveGame(game);
-    }
+    humanPlaysHand("paper");
 });
 
 CPU_VS_CPU_BUTTON.addEventListener('click', function() {
@@ -79,6 +67,14 @@ function resolveGame(game) {
     } else GAME_WINNER.innerHTML = "The winner is " + result + " !!";
 
     GAME_RESULTS.style.visibility = "visible";
+}
+
+function humanPlaysHand(hand) {
+    if ((game_mode === 'human_vs_cpu') && (player1.hand === null)) {
+        player1.takeHand(hand); hightlightHand_UI(player1, 1);
+        player2.takeHand(); hightlightHand_UI(player2, 2);
+        resolveGame(game);
+    }
 }
 
 /* UI functions */
