@@ -1,12 +1,12 @@
 # Rock Paper Scissors Lizard Spock
 
-A responsive rock paper scissors game.
+A responsive rock paper scissors lizard spock game.
 
 ## Use cases
 
 ```
-- [x] As a User, so that I can play a basic game of Rock Paper Scissors Player vs Computer
-- [x] As a User, so that I can play a basic game of Rock Paper Scissors Computer vs Computer
+- [x] As a User, so that I can play a basic game of Rock Paper Scissors Lizard Spock Player vs Computer
+- [x] As a User, so that I can play a basic game of Rock Paper Scissors Lizard Spock Computer vs Computer
 - [x] As a User, so that I can switch from one game to another 
 ```
 
