@@ -4,15 +4,23 @@ describe("CPUPlayer", function() {
 
     beforeEach( function() {
         const HAND_CHOICES = {
-            "rock": "scissors",
-            "paper": "rock",
-            "scissors": "paper"
+            "rock": ["scissors", "lizard"],
+            "paper": ["rock", "spock"],
+            "scissors": ["paper", "lizard"],
+            "lizard": ["paper", "spock"],
+            "spock": ["scissors", "rock"]
         }
         player = new CPUPlayer(HAND_CHOICES);
     });
 
     it("has an empty hand on init", function() {
         expect(player.hand).toEqual(null);
+    });
+
+    it("has access to the hand choices", function() {
+        expect(player.handChoices).toEqual({ "rock": ["scissors", "lizard"], "paper": ["rock", "spock"],
+            "scissors": ["paper", "lizard"], "lizard": ["paper", "spock"], "spock": ["scissors", "rock"]  
+        });
     });
 
     it("plays a random hand", function() {

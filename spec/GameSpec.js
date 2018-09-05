@@ -5,6 +5,13 @@ describe("Game", function() {
         "paper": "rock",
         "scissors": "paper"
     }
+    const HAND_CHOICES_EXPANDED = {
+        "rock": ["scissors", "lizard"],
+        "paper": ["rock", "spock"],
+        "scissors": ["paper", "lizard"],
+        "lizard": ["paper", "spock"],
+        "spock": ["scissors", "rock"]
+    }
 
     var game, player1, player2;
 
@@ -13,6 +20,7 @@ describe("Game", function() {
         playerCPU = new CPUPlayer();
         HC_Game = new Game(HAND_CHOICES, playerHuman, playerCPU);
         CC_Game = new Game(HAND_CHOICES, playerCPU, playerCPU);
+        E_Game = new Game(HAND_CHOICES_EXPANDED, playerCPU, playerCPU);
 
         // Refactor for later tests based only on game logic
         player1 = playerHuman; player2 = playerCPU;
@@ -22,6 +30,12 @@ describe("Game", function() {
     it("any game has a hand set on init", function() {
         expect(HC_Game.handChoices).toEqual(HAND_CHOICES);
         expect(CC_Game.handChoices).toEqual(HAND_CHOICES);
+        expect(E_Game.handChoices).toEqual(HAND_CHOICES_EXPANDED);
+    });
+
+    it("has two players when starts", function() {
+        expect(game.player1).toBe(player1);
+        expect(game.player2).toBe(player2);
     });
 
     it("Human vs Computer game has a human player and a computer player on init", function() {

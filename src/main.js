@@ -1,7 +1,9 @@
 const HAND_CHOICES = {
-    "rock": "scissors",
-    "paper": "rock",
-    "scissors": "paper"
+    "rock": ["scissors", "lizard"],
+    "paper": ["rock", "spock"],
+    "scissors": ["paper", "lizard"],
+    "lizard": ["paper", "spock"],
+    "spock": ["scissors", "rock"]
 }
 
 const HUMAN_VS_CPU_BUTTON = document.querySelector("#start-player-computer");
@@ -15,6 +17,8 @@ const PLAY_AGAIN = document.querySelector("#new-game");
 const HUMAN_PLAYS_ROCK = document.querySelector("#game-player1 .rock");
 const HUMAN_PLAYS_PAPER = document.querySelector("#game-player1 .paper");
 const HUMAN_PLAYS_SCISSORS = document.querySelector("#game-player1 .scissors");
+const HUMAN_PLAYS_LIZARD = document.querySelector("#game-player1 .lizard");
+const HUMAN_PLAYS_SPOCK = document.querySelector("#game-player1 .spock");
 
 var game_mode = '';
 
@@ -33,6 +37,14 @@ HUMAN_PLAYS_SCISSORS.addEventListener('click', function() {
 
 HUMAN_PLAYS_PAPER.addEventListener('click', function() {
     humanPlaysHand("paper");
+});
+
+HUMAN_PLAYS_LIZARD.addEventListener('click', function() {
+    humanPlaysHand("lizard");
+});
+
+HUMAN_PLAYS_SPOCK.addEventListener('click', function() {
+    humanPlaysHand("spock");
 });
 
 CPU_VS_CPU_BUTTON.addEventListener('click', function() {
@@ -85,7 +97,7 @@ function hightlightHand_UI(player, number) {
 
 function reset_UI() {
     GAME_RESULTS.style.visibility = "hidden";
-    const allHands = document.querySelectorAll(".rock, .scissors, .paper");
+    const allHands = document.querySelectorAll(".rock, .scissors, .paper, .lizard, .spock");
     allHands.forEach(function (item) {
         item.style.backgroundColor = "white";
     });

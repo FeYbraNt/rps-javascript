@@ -10,4 +10,9 @@ describe("HumanPlayer", function() {
         expect(player.hand).toEqual(null);
     });
 
+    it("stores a selected hand when passed a valid string", function() {
+        player.takeHand("rock");
+        expect(player.hand).toEqual("rock");
+    });
+
 });

@@ -28,3 +28,5 @@ open SpecRunner.html for tests
 - Testing - Jasmine
 
 ## Further Improvments
+
+- Added **Lizard** and **Spock** logic.
