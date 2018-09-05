@@ -1,4 +1,4 @@
-# Rock Paper Scissors
+# Rock Paper Scissors Lizard Spock
 
 A responsive rock paper scissors game.
 
