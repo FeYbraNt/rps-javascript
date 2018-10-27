@@ -22,14 +22,14 @@
                     <h2>Rock, Paper, Scissors, Lizard & Spock</h2>
                     <img src="img/rules.png" width="200" id="rules">
                     <h3><i>Click to start a game</i></h3>
-                    <button class="btn btn-primary" id="start-player-computer">Player vs CPU</button>
-                    <button class="btn btn-danger" id="start-computer-computer">CPU vs CPU</button>    
+                    <button class="btn btn-primary" id="start-human_vs_cpu">Player vs CPU</button>
+                    <button class="btn btn-danger" id="start-cpu_vs_cpu">CPU vs CPU</button>    
                 </div>
             </div>
         </div>
 
         <!-- THE GAME -->
-        <div class="container text-center" id="game" style="visibility: hidden;">
+        <div class="container text-center" id="game" style="display: none;">
             <div class="col-md-5">
                 <h3> Player 1: </h3>
                     <div class="btn-group btn-group-toggle" id="game-player1">
@@ -59,7 +59,7 @@
         </div>
 
         <!-- RESULTS & PLAY AGAIN -->
-        <div class="container text-center" id="results" style="visibility: hidden;">
+        <div class="container text-center" id="results" style="display: none;">
             <h2></h2>
             <button class="btn btn-info" id="new-game">Play Again?</button>
         </div>
